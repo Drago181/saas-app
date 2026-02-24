@@ -23,7 +23,7 @@ const Profile = async () => {
         <main className='min-lg:w-3/4'>
             <section className='flex justify-between gap-4 max-sm:flex-col items-center'>
                 <div className='flex gap-4 items-center'>
-                    <Image src={user.imageUrl} alt={user.firstName} width={110} height={110} />
+                    <Image src={user.imageUrl ?? '/public/icons/default-profile.svg'} alt={user.firstName ?? 'User'} width={110} height={110} />
                     <div className='flex flex-col gap-2'>
                         <h1 className='font-bold text-2xl'>{user.firstName} {user.lastName}</h1>
                         <p className='text-sm text-muted-foreground'>
