@@ -197,6 +197,8 @@ const CompanionForm = () => {
                                     type='number'
                                     placeholder="15"
                                     {...field}
+                                    value={field.value ?? 15}
+                                    onChange={(e) => field.onChange(e.target.valueAsNumber)}
                                     className='input'
                                 />
                             </FormControl>
