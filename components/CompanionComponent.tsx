@@ -82,8 +82,8 @@ const CompanionComponent = ({ companionId, subject, topic, name, userName, userI
 
         const assistantOverrides = {
             variableValues: { subject, topic, style },
-            clientMessages: 'transcript',
-            serverMessages: [],
+            clientMessages: ['transcript'] as const, // ✅ 'as const' makes it a literal type
+            serverMessages: [] as const,
         }
 
         vapi.start(configureAssistant(voice, style), assistantOverrides)
