@@ -86,7 +86,7 @@ const CompanionComponent = ({ companionId, subject, topic, name, userName, userI
         vapi.start(configureAssistant(voice, style), {
             variableValues: { subject, topic, style },
             clientMessages: 'transcript', // ✅ 'as const' makes it a literal type
-            serverMessages: [],}
+            serverMessages: 'model-output',}
         );
     }
 
